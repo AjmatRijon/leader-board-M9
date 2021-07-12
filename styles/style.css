@@ -1,6 +1,45 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+/* common elements */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F1FF;
+    }
+    .container{
+        background-color: white;
+        width: 870px;
+        padding: 30px;
+        margin-top: 21px;
+        border-radius: 5px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        
+    }
+    hr{
+        border: 1px solid #D1D1D1;
+        margin-bottom: 28px;
+    }
 /* top player styles */
+
+.section-title{
+    color:#562EFF ;
+    font-size:24px ;
+    margin-top: 3px;
+
+}
+
+.top-players{
+    margin-bottom: 30px;
+}
 .players{
     display: grid;
+    grid-row-gap: 30px;
     grid-template-columns: repeat(3,1fr);
 }
 .player{
@@ -10,4 +49,105 @@
 .player img{
     height: 56px;
     width: 56px;
+}
+.player-name{
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+/* top blog styles */
+
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 26px;
+}
+
+.blog{
+    display: flex;
+}
+
+.blog .thumbnail img{
+    width: 177px;
+    height: 117px;
+}
+.blog-info{
+    margin-left: 16px;
+}
+.blog-title{
+    font-size: 20px;
+}
+.blog-author{
+    color: #9F9F9F;
+}
+.blog-author a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #562EFF;
+}
+
+/* latest courses */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap:24px ;
+}
+
+.course{
+    width: 252px;
+    height: 269px;
+    padding: 10px;
+    box-shadow: 1px 1px 4px #80808061;
+    border-radius: 20px;
+}
+.course .course-banner img{
+    width: 224px;
+    height: 104px;
+
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-start{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #FFC014;
+}
+.fa-star.empty{
+    color: #AEAEAE;
+}
+
+/* media queries */
+/* Mobile devices */
+@media only screen and (max-width:688px){
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+    
+}
+
+/* ipad device */
+
+@media only screen and (min-width:688px) and (max-width:992px){
+    .container{
+        width: 100%;
+    }
+    
+    .players,.courses{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .blogs{
+        grid-template-columns: repeat(1,1fr);
+    }
+
 }
