@@ -6,6 +6,8 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #F3F1FF;
+    margin: 0;
+    padding: 0;
     }
     .container{
         background-color: white;
@@ -25,6 +27,52 @@ body{
         border: 1px solid #D1D1D1;
         margin-bottom: 28px;
     }
+
+
+/* nav styles */
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #562EFF;
+    height: 90px;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 12%;
+}
+
+.logo h3 {
+        font-size: 35px;
+        margin-left: 15px;
+        color: white;
+}
+
+.nav-list ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-list ul li{
+    list-style: none;
+    margin-left: 15px;
+}
+
+.profile-image{
+    width: 100%;
+}
+
+.nav-list ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
 /* top player styles */
 
 .section-title{
@@ -95,13 +143,13 @@ body{
 
 .course{
     width: 252px;
-    height: 269px;
+    height: 280px;
     padding: 10px;
     box-shadow: 1px 1px 4px #80808061;
     border-radius: 20px;
 }
 .course .course-banner img{
-    width: 224px;
+    width: 100%;
     height: 104px;
 
 }
@@ -119,9 +167,18 @@ body{
 .fa-star.empty{
     color: #AEAEAE;
 }
-
-/* media queries */
-/* Mobile devices */
+.course-duration {
+    background: #FFE4E8;
+    /* width: 94px; */
+    /* height: 29px; */
+    padding: 5px 20px;
+    border-radius: 15px;
+    color: #FF4A60;
+}
+        /*------------
+        media queries 
+        -------------*/
+        /* Mobile devices */
 @media only screen and (max-width:688px){
     .container{
         width: 100%;
